@@ -1,8 +1,10 @@
-/* This is my first Java Class
-Hej Javi!
- */
+/* This is my first Java Class */
+// Import class with components
+import javax.swing.*;
+// Instantiate Class
 public class Hej {
-    public static void main(String[] args) {
-        System.out.println("Hej Javi!"); // print out String
+    public static void main(String[] arg){
+        // Alert window
+        JOptionPane.showMessageDialog(null,"Hej!");
     }
 }

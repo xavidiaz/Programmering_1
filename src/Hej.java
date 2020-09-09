@@ -5,6 +5,6 @@ import javax.swing.*;
 public class Hej {
     public static void main(String[] arg){
         // Alert window
-        JOptionPane.showMessageDialog(null,"Hej!");
+        JOptionPane.showMessageDialog(null,"Hej Javier!");
     }
 }

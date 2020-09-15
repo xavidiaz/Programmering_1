@@ -28,6 +28,8 @@
 
 package book;
 
+import javax.swing.*;
+
 /**
  * Skriv ett program som i metoden main innehåller deklarationer av
  * två char-variabler med namnen c1 och c2.
@@ -36,10 +38,10 @@ package book;
  */
 public class OvningTvaSex {
     public static void main (String[] arg){
-        //char c1, c2;
-        //c1 = "\u00D8";
-        //c2 = "\u00F8";
+        char c1, c2;
+        c1 = '\u00D8';
+        c2 = '\u00F8';
 
-        //JOptionPane.showMessageDialog(null, c1 + "\n" + c2);
+        JOptionPane.showMessageDialog(null, c1 + "\n" + c2);
     }
 }

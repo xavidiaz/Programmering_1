@@ -28,18 +28,25 @@
 
 package book;
 
-/**
- * Skriv ett program som i metoden main innehåller deklarationer av
- * två char-variabler med namnen c1 och c2.
- * Skriv sedan satser som tilldellar ett stor Ø till c1 och ett litet ø till c2.
- * Försök sedan skriva ut c1 och c2 i dialogrutor.
- */
-public class OvningTvaSex {
-    public static void main (String[] arg){
-        //char c1, c2;
-        //c1 = "\u00D8";
-        //c2 = "\u00F8";
+import javax.swing.*;
 
-        //JOptionPane.showMessageDialog(null, c1 + "\n" + c2);
+/**
+ * Deklarera två String-variabler a och b och tilldela texten "Programspråk" till a.
+ * Skriv sedan en sats som tilldelar variabeln b värdet "ramsa" genom att plocka ut
+ * delar av texten a.
+ * Lägg staserna i ett program som på slutet visar den text som finns i b i en
+ * dialogruta.
+ */
+public class OvningTvaOtta {
+    public static void main (String[] arg){
+        // deklarera variabler
+        String a, b;
+        // tilldella 'Programspråk'
+        a = "Programspråk";
+        // tilldelar variabeln b värdet "ramsa" från a
+        b = a.substring(4, 8) + "a";
+        // dialogruta
+        JOptionPane.showMessageDialog(null, b);
     }
+
 }

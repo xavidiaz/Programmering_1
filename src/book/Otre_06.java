@@ -50,8 +50,9 @@ public class Otre_06 {
         // calculation
         iSek = (int) Integer.parseInt(iTSek);
         sek = (int) iSek % 60;
-        tim = (int) iSek / 3600;
-        min = (int) (iSek % 3600)/60;
+        tim = (int) iSek / 60;
+        min = (int) tim % 60;
+        tim = tim / 60;
         // Dialogruta
         JOptionPane.showMessageDialog(null,
                 "" + tim + " timar." +

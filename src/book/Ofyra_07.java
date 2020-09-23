@@ -30,6 +30,7 @@ package book;
 
 import javax.swing.*;
 import java.text.Collator;
+import java.util.Locale;
 
 /**
  * Skriv ett program som först läser in namnen på tva personer och som sedan
@@ -44,6 +45,9 @@ public class Ofyra_07 {
                 person2,
                 title = "i svensk alfaetisk ordning",
                 lista;
+        // Initiera Svenka locale
+        Locale swedishLocale = new Locale("sv", "SE");
+        Locale.setDefault(swedishLocale);
         // Inputruta
         person1 = JOptionPane.showInputDialog(null,
                 "Skriv Efternamn, Namn:",
@@ -52,7 +56,7 @@ public class Ofyra_07 {
                 "Skriv Efternamn, Namn:",
                 title, JOptionPane.INFORMATION_MESSAGE);
         // Deklarera jämförae
-        Collator jamn = Collator.getInstance();
+        Collator jamn = Collator.getInstance(swedishLocale);
         jamn.setStrength(Collator.PRIMARY);
         // metod
         jamn.compare(person1, person2);

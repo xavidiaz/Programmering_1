@@ -28,9 +28,6 @@
 
 package book;
 
-import java.util.Calendar;
-import java.util.Date;
-
 /**
  * Sriv ett program som i en dialogruta lläser in ett personnummer.
  * programmet skall undersöka om den aktuella personen har
@@ -46,13 +43,13 @@ public class OfyraSult_05 {
                 fDag,
                 sDatum;
         // Get datum
-        Date datum = Calendar.getInstance().getTime();
+        /*Date datum = Calendar.getInstance().getTime();
         sDatum = Integer.pa
         System.out.println(
                 datum.substring
         );
 
-        /*sDatum = SimpleDateFormat.format(datum);
+        sDatum = SimpleDateFormat.format(datum);
 
         // Inputruta
         iPersonnummer =  JOptionPane.showInputDialog(null,

@@ -31,12 +31,12 @@ package book;
 import javax.swing.*;
 
 /**
- * I en triangel kan man eteckna sidorna med a, b och c. Om man
+ * I en triangel kan man beteckna sidorna med a, b och c. Om man
  * känner till längderna för sidorna a och b samt vinkeln mellan
  * dessa sidor så kan man räkna ut längden av sidan cd med formeln
  * XXX. Skriv ett program som läser in längderna på två sidor i en
  * triangel och vinkeln mellan sidorna. Programmet skall avgöra om
- * triangel är liksidig, likbent eller olisidig.
+ * triangel är liksidig, likbent eller oliksidig.
  *
  */
 public class OfyraSult_06 {

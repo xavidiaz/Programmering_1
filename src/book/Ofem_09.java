@@ -28,6 +28,8 @@
 
 package book;
 
+import javax.swing.*;
+
 /**
  * Ändra i programmet så att det dialogrutan istället visas n st plustecken på
  * första raden, n-1 plustecken på andra raden osv. tills det på sista raden visas
@@ -35,6 +37,15 @@ package book;
  */
 public class Ofem_09 {
     public static void main(String[] arg){
-
+        String s =JOptionPane.showInputDialog("Antal rader?");
+        int n = Integer.parseInt(s);
+        String txt = "";
+        for (int i=n; i>0; i--) {
+            for (int j=1; j<=i; j++)
+                txt = txt + '+';
+            txt = txt + '\n';
+        }
+        JOptionPane.showMessageDialog(null, txt);
     }
+
 }

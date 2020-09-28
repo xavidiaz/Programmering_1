@@ -28,6 +28,8 @@
 
 package book;
 
+import javax.swing.*;
+
 /**
  * Ändra i program som visar en tabell med värden för uttrycket istället skrivs
  * ut för alla x i intervallet -1 till +1 med steget 0,1 dvs. för -1,0,-0,9,... 0,9,
@@ -35,6 +37,11 @@ package book;
  */
 public class Ofem_08 {
     public static void main(String[] arg){
-
+        String tabell = "";
+        for (double x=-1; x<=1; x=x+0.1) {
+            double f = 2*x*x - 5*x + 1;
+            tabell += x + "   " + f + "\n";
+        }
+        JOptionPane.showMessageDialog(null, tabell);
     }
 }

@@ -28,6 +28,8 @@
 
 package book;
 
+import javax.swing.*;
+
 /**
  * Skriv ett program som läser in ett godtyckligt antal tal. När
  * användaren klickar på knappen Avbryt skall programmet skriva
@@ -35,6 +37,19 @@ package book;
  */
 public class OfemSlut_01 {
     public static void main(String[] arg){
+        double maxTal = -1.7e308;
+        double minTal = 1.7e308;
+
+    while (true) {
+        Double s = Double.parseDouble(
+                JOptionPane.showInputDialog(null,
+                "Skriv en tal:"));
+        maxTal = Math.max(maxTal, s);
+        minTal = Math.min(minTal, s);
+        JOptionPane.showMessageDialog(null,
+                "Största talet är: " + (int)maxTal + "\n" +
+                "Minsta talet är: " + (int)minTal);
+    }
 
     }
 }

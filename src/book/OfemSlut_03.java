@@ -31,23 +31,22 @@ package book;
 import javax.swing.*;
 
 /**
- * Skriv ett program som skriver ut en tabell för talen 1 till 12. På
- * varje rad i tabellen skall talet visas liksom talet i kvadrat och talet
- * i kubik.
- * @link http://skansholm.com/javasteg/uppgifter/kap5/uppg5-2.txt
+ * På en mycket farllig arbetsplats erbjuds man följande lön: första
+ * dagen tjänar man ett öre och sedan fördubblas lönen varje dag.
+ * Skriv ett program som räkna ut hur länge man behöver arbeta
+ * för att tjäna ihop 10 miljoner kronor.
  */
-public class OfemSlut_02 {
+public class OfemSlut_03 {
     public static void main(String[] arg){
-        int tal = 1;
-        String medTal ="";
-            for(int i=0; i<13; i++){
-                medTal = medTal + i + ".\n" +
-                        "kvadrat: " + i*i + "\n" +
-                        "kubik: " + i*i*i + "\n";
-
-
+    Integer mal = 10000000;
+    String nDagar = "";
+    int iDagar = 1;
+        while(iDagar < mal){
+            iDagar *=2;
+            nDagar = iDagar+"";
         }
+
         JOptionPane.showMessageDialog(null,
-                medTal);
+                "Man behöver " + nDagar + " dagar för att tjäna " + mal + "kr.");
     }
 }

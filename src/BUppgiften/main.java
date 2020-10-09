@@ -34,7 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class main {
-    public static void main(String[] arg){
+    public static void main(String[] arg) {
         // variabler
         String
                 rubrik = "Genomsnittsålder";
@@ -51,7 +51,7 @@ public class main {
                 M2 = 99; // genomsnittsåldern Män
         // do while loop för att upprepa "Mata in Person"
         int fler;
-        do{
+        do {
             // Mata in person Ålder
             alder = Float.parseFloat(
                     JOptionPane.showInputDialog(null,
@@ -67,9 +67,9 @@ public class main {
             int getGenre = JOptionPane.showOptionDialog(dialog.getContentPane(),
                     "Välj genre:",
                     "Title", 0,
-                    JOptionPane.INFORMATION_MESSAGE,null,genre,null);
+                    JOptionPane.INFORMATION_MESSAGE, null, genre, null);
 
-            if(getGenre == 1){ // Man
+            if (getGenre == 1) { // Man
                 // Addera till A1
                 A1 = alder;
                 // Addera till G1
@@ -87,12 +87,12 @@ public class main {
                     "Fler?",
                     rubrik,
                     JOptionPane.YES_NO_OPTION);
-        }while(fler == 0);
+        } while (fler == 0);
         // Beräknar genomsnittsåldern för kvinnor respektive män i gruppen
         // Arraylist to float array
         // Skappa float Array
-        float[] aG1= new float[G1.size()];
-        float[] aG2= new float[G2.size()];
+        float[] aG1 = new float[G1.size()];
+        float[] aG2 = new float[G2.size()];
         // ArrayList to Array (Conversion)
         for (int j = 0; j < G1.size(); j++) {
             aG1[j] = (float) G1.get(j);
@@ -101,29 +101,28 @@ public class main {
             aG2[j] = (float) G2.get(j);
         }
         // addera åldrar
-        for(int i=0; i< aG1.length; i++ ){
-            nA1+= aG1[i];
+        for (int i = 0; i < aG1.length; i++) {
+            nA1 += aG1[i];
         }
-        for(int i=0; i< aG2.length; i++ ){
-            nA2+= aG2[i];
+        for (int i = 0; i < aG2.length; i++) {
+            nA2 += aG2[i];
         }
         // M1 = G1/A1
-        M1 = (G1.size()/ nA1);
+        M1 = (nA1 / G1.size());
         // Skriv ut A1 & M1
         JOptionPane.showMessageDialog(null,
-                "Kvinna: \n" +
-                        "Åldersumman: " + nA2 + ".\n" +
-                        "genomsnittsåldern:" + M2 + ".\n",
+                "Män: \n" +
+                        "Åldersumman: " + nA1 + ".\n" +
+                        "genomsnittsåldern:" + M1 + ".\n",
                 rubrik, JOptionPane.INFORMATION_MESSAGE);
         // M2 = G2/A2
-        M2 = (G2.size()/ nA2);
+        M2 = (nA2 / G2.size());
         // Skriv ut A2 & M2
         JOptionPane.showMessageDialog(null,
-                "Män: \n" +
-                        "Åldersumman:" + nA1 + ".\n" +
-                        "Genomsnittsåldern: " + M1 + ".\n",
+                "Kvninna: \n" +
+                        "Åldersumman:" + nA2 + ".\n" +
+                        "Genomsnittsåldern: " + M2 + ".\n",
                 rubrik, JOptionPane.INFORMATION_MESSAGE);
     }
+
 }
-
-

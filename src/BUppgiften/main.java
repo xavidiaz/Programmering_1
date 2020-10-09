@@ -64,25 +64,21 @@ public class main {
             genre[0] = new String("Kvinna");
             genre[1] = new String("Man");
 
-            JOptionPane.showOptionDialog(dialog.getContentPane(),
+            int getGenre = JOptionPane.showOptionDialog(dialog.getContentPane(),
                     "Välj genre:",
                     "Title", 0,
                     JOptionPane.INFORMATION_MESSAGE,null,genre,null);
 
-            if(true){
+            if(getGenre == 1){ // Man
                 // Addera till A1
                 A1 = alder;
                 // Addera till G1
                 G1.add(A1);
-                JOptionPane.showMessageDialog(null,
-                        G1);
-            } else {
+            } else { // Kvinna
                 // Addera till A2
                 A2 = alder;
                 // Addera till G2
                 G2.add(A2);
-                JOptionPane.showMessageDialog(null,
-                        G2);
             }
 
             // Dialog fråga Fler?
@@ -115,15 +111,17 @@ public class main {
         M1 = (G1.size()/ nA1);
         // Skriv ut A1 & M1
         JOptionPane.showMessageDialog(null,
-                "A1: " + nA1 + ".\n" +
-                        "M1: " + M1 + ".\n",
+                "Kvinna: \n" +
+                        "Åldersumman: " + nA2 + ".\n" +
+                        "genomsnittsåldern:" + M2 + ".\n",
                 rubrik, JOptionPane.INFORMATION_MESSAGE);
         // M2 = G2/A2
         M2 = (G2.size()/ nA2);
         // Skriv ut A2 & M2
         JOptionPane.showMessageDialog(null,
-                "A2: " + nA2 + ".\n" +
-                        "M2: " + M2 + ".\n",
+                "Män: \n" +
+                        "Åldersumman:" + nA1 + ".\n" +
+                        "Genomsnittsåldern: " + M1 + ".\n",
                 rubrik, JOptionPane.INFORMATION_MESSAGE);
     }
 }
